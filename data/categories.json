@@ -1,208 +1,256 @@
 {
   "categories": [
     {
+      "id": 1,
       "name": "Electronics",
       "imageLink": "https://example.com/electronics.jpg",
       "subCategories": [
         {
+          "id": 101,
           "name": "Smartphones",
           "imageLink": "https://example.com/smartphones.jpg"
         },
         {
+          "id": 102,
           "name": "Laptops and Computers",
           "imageLink": "https://example.com/laptops-computers.jpg"
         },
         {
+          "id": 103,
           "name": "Smartwatches and Wearables",
           "imageLink": "https://example.com/smartwatches.jpg"
         },
         {
+          "id": 104,
           "name": "Headphones and Earbuds",
           "imageLink": "https://example.com/headphones-earbuds.jpg"
         },
         {
+          "id": 105,
           "name": "Home Appliances",
           "imageLink": "https://example.com/home-appliances.jpg"
         }
       ]
     },
     {
+      "id": 2,
       "name": "Fashion and Apparel",
       "imageLink": "https://example.com/fashion-apparel.jpg",
       "subCategories": [
         {
+          "id": 201,
           "name": "Men's Clothing",
           "imageLink": "https://example.com/mens-clothing.jpg"
         },
         {
+          "id": 202,
           "name": "Women's Clothing",
           "imageLink": "https://example.com/womens-clothing.jpg"
         },
         {
+          "id": 203,
           "name": "Shoes and Footwear",
           "imageLink": "https://example.com/shoes-footwear.jpg"
         },
         {
+          "id": 204,
           "name": "Accessories",
           "imageLink": "https://example.com/accessories.jpg"
         },
         {
+          "id": 205,
           "name": "Jewelry",
           "imageLink": "https://example.com/jewelry.jpg"
         }
       ]
     },
     {
+      "id": 3,
       "name": "Home and Living",
       "imageLink": "https://example.com/home-living.jpg",
       "subCategories": [
         {
+          "id": 301,
           "name": "Furniture",
           "imageLink": "https://example.com/furniture.jpg"
         },
         {
+          "id": 302,
           "name": "Kitchenware",
           "imageLink": "https://example.com/kitchenware.jpg"
         },
         {
+          "id": 303,
           "name": "Home Décor",
           "imageLink": "https://example.com/home-decor.jpg"
         },
         {
+          "id": 304,
           "name": "Bedding and Linens",
           "imageLink": "https://example.com/bedding-linens.jpg"
         },
         {
+          "id": 305,
           "name": "Storage Solutions",
           "imageLink": "https://example.com/storage-solutions.jpg"
         }
       ]
     },
     {
+      "id": 4,
       "name": "Beauty and Personal Care",
       "imageLink": "https://example.com/beauty-personal-care.jpg",
       "subCategories": [
         {
+          "id": 401,
           "name": "Skincare",
           "imageLink": "https://example.com/skincare.jpg"
         },
         {
+          "id": 402,
           "name": "Hair Care",
           "imageLink": "https://example.com/hair-care.jpg"
         },
         {
+          "id": 403,
           "name": "Makeup",
           "imageLink": "https://example.com/makeup.jpg"
         },
         {
+          "id": 404,
           "name": "Fragrances and Perfumes",
           "imageLink": "https://example.com/fragrances.jpg"
         },
         {
+          "id": 405,
           "name": "Grooming Tools",
           "imageLink": "https://example.com/grooming-tools.jpg"
         }
       ]
     },
     {
+      "id": 5,
       "name": "Sports and Outdoors",
       "imageLink": "https://example.com/sports-outdoors.jpg",
       "subCategories": [
         {
+          "id": 501,
           "name": "Exercise Equipment",
           "imageLink": "https://example.com/exercise-equipment.jpg"
         },
         {
+          "id": 502,
           "name": "Outdoor Gear",
           "imageLink": "https://example.com/outdoor-gear.jpg"
         },
         {
+          "id": 503,
           "name": "Sports Apparel",
           "imageLink": "https://example.com/sports-apparel.jpg"
         },
         {
+          "id": 504,
           "name": "Bicycles and Accessories",
           "imageLink": "https://example.com/bicycles-accessories.jpg"
         },
         {
+          "id": 505,
           "name": "Camping Equipment",
           "imageLink": "https://example.com/camping-equipment.jpg"
         }
       ]
     },
     {
+      "id": 6,
       "name": "Toys and Games",
       "imageLink": "https://example.com/toys-games.jpg",
       "subCategories": [
         {
+          "id": 601,
           "name": "Board Games and Puzzles",
           "imageLink": "https://example.com/board-games-puzzles.jpg"
         },
         {
+          "id": 602,
           "name": "Action Figures and Dolls",
           "imageLink": "https://example.com/action-figures-dolls.jpg"
         },
         {
+          "id": 603,
           "name": "Educational Toys",
           "imageLink": "https://example.com/educational-toys.jpg"
         },
         {
+          "id": 604,
           "name": "Outdoor Play",
           "imageLink": "https://example.com/outdoor-play.jpg"
         },
         {
+          "id": 605,
           "name": "Video Games and Consoles",
           "imageLink": "https://example.com/video-games-consoles.jpg"
         }
       ]
     },
     {
+      "id": 7,
       "name": "Books and Stationery",
       "imageLink": "https://example.com/books-stationery.jpg",
       "subCategories": [
         {
+          "id": 701,
           "name": "Fiction and Non-Fiction Books",
           "imageLink": "https://example.com/fiction-non-fiction-books.jpg"
         },
         {
+          "id": 702,
           "name": "School Supplies",
           "imageLink": "https://example.com/school-supplies.jpg"
         },
         {
+          "id": 703,
           "name": "Office Supplies",
           "imageLink": "https://example.com/office-supplies.jpg"
         },
         {
+          "id": 704,
           "name": "Journals and Planners",
           "imageLink": "https://example.com/journals-planners.jpg"
         },
         {
+          "id": 705,
           "name": "Crafting Materials",
           "imageLink": "https://example.com/crafting-materials.jpg"
         }
       ]
     },
     {
+      "id": 8,
       "name": "Food and Beverages",
       "imageLink": "https://example.com/food-beverages.jpg",
       "subCategories": [
         {
+          "id": 801,
           "name": "Snacks and Sweets",
           "imageLink": "https://example.com/snacks-sweets.jpg"
         },
         {
+          "id": 802,
           "name": "Beverages",
           "imageLink": "https://example.com/beverages.jpg"
         },
         {
+          "id": 803,
           "name": "Gourmet and Organic Foods",
           "imageLink": "https://example.com/gourmet-organic-foods.jpg"
         },
         {
+          "id": 804,
           "name": "Health Foods",
           "imageLink": "https://example.com/health-foods.jpg"
         },
         {
+          "id": 805,
           "name": "Cooking Ingredients",
           "imageLink": "https://example.com/cooking-ingredients.jpg"
         }

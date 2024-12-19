@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products</title>
   <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -16,24 +17,38 @@
         </h2>
       </div>
 
-      <!-- Category Filter Dropdown -->
-      <div class="filter-container">
-        <select id="categoryFilter" onchange="filterProducts()">
-          <option value="">Select Category</option>
-          <!-- Categories will be populated here dynamically -->
-        </select>
-      </div>
+      <div class="row">
+        <!-- Filters Column -->
+        <div class="col-md-3">
+          <div class="filter-sidebar">
+            <div class="filter-box">
+              <h4>Filter By Category</h4>
+              <select id="categoryFilter" class="form-control" onchange="filterProducts()">
+                <option value="">All Categories</option>
+              </select>
+            </div>
+            
+            <div class="filter-box">
+              <h4>Sort By Price</h4>
+              <select id="priceSort" class="form-control" onchange="filterProducts()">
+                <option value="">Select Order</option>
+                <option value="lowToHigh">Price: Low to High</option>
+                <option value="highToLow">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+        </div>
 
-      <div class="row" id="productGrid">
-        <!-- Products will be populated here dynamically -->
-      </div>
-      
-      <div class="btn-box">
-        <a href="#">View All Products</a>
+        <!-- Products Grid Column -->
+        <div class="col-md-9">
+          <div class="row" id="productGrid">
+            <!-- Products will be populated here dynamically -->
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <script src="js/products.js"></script> <!-- Link to your JS -->
+  <script src="js/main.js"></script> <!-- Link to your JS -->
 </body>
 </html>

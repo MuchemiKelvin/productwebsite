@@ -1,26 +1,45 @@
-// Sample Product Data (replace with your actual product data or fetch it from a JSON file)
-const products = [
-  { id: 1, name: "Product 1", price: 10, category: "Category 1", imageUrl: "product1.jpg" },
-  { id: 2, name: "Product 2", price: 15, category: "Category 2", imageUrl: "product2.jpg" },
-  { id: 3, name: "Product 3", price: 20, category: "Category 1", imageUrl: "product3.jpg" },
-  { id: 4, name: "Product 4", price: 25, category: "Category 3", imageUrl: "product4.jpg" },
-  // Add more products here
-];
+// Replace the hardcoded products array with a fetch call
+let products = []; // Initialize empty array
+let filteredProducts = []; // Initialize filtered products
 
-// To store filtered products
-let filteredProducts = products;
+// Fetch products from JSON file
+async function fetchProducts() {
+    try {
+        const response = await fetch('/data/products.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch products');
+        }
+        products = await response.json();
+        filteredProducts = products; // Initialize filtered products with all products
+        
+        // After fetching products, initialize the UI
+        initializeUI();
+    } catch (error) {
+        console.error('Error loading products:', error);
+        // Optionally display error message to user
+    }
+}
 
-// Extract unique categories from products
-const categories = Array.from(new Set(products.map(product => product.category)));
+// Move existing initialization code into a separate function
+function initializeUI() {
+    // Extract unique categories from products
+    const categories = Array.from(new Set(products.map(product => product.category)));
+    
+    // Populate category dropdown
+    const categoryFilter = document.getElementById('categoryFilter');
+    categories.forEach(category => {
+        const option = document.createElement('option');
+        option.value = category;
+        option.innerText = category;
+        categoryFilter.appendChild(option);
+    });
 
-// Populate category dropdown
-const categoryFilter = document.getElementById('categoryFilter');
-categories.forEach(category => {
-  const option = document.createElement('option');
-  option.value = category;
-  option.innerText = category;
-  categoryFilter.appendChild(option);
-});
+    // Display initial products
+    displayProducts(filteredProducts);
+}
+
+// Call fetchProducts when the page loads
+fetchProducts();
 
 // Function to display products
 function displayProducts(productsToDisplay) {
@@ -99,6 +118,3 @@ function filterProducts() {
 function addToCart(product) {
   console.log(`${product.name} added to cart`);
 }
-
-// Display products initially
-displayProducts(filteredProducts);
