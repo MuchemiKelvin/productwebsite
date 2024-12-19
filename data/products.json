@@ -1,0 +1,139 @@
+{
+  "categories": [
+    {
+      "name": "Electronics",
+      "imageLink": "https://example.com/electronics.jpg",
+      "subCategories": [
+        {
+          "name": "Smartphones",
+          "imageLink": "https://example.com/smartphones.jpg",
+          "products": [
+            { "name": "Apple iPhone 15", "price": 999, "category": "Electronics", "subCategory": "Smartphones" },
+            { "name": "Samsung Galaxy S23", "price": 899, "category": "Electronics", "subCategory": "Smartphones" },
+            { "name": "OnePlus 11", "price": 799, "category": "Electronics", "subCategory": "Smartphones" }
+          ]
+        },
+        {
+          "name": "Laptops and Computers",
+          "imageLink": "https://example.com/laptops.jpg",
+          "products": [
+            { "name": "Dell XPS 13", "price": 1200, "category": "Electronics", "subCategory": "Laptops and Computers" },
+            { "name": "MacBook Pro 14-inch", "price": 2000, "category": "Electronics", "subCategory": "Laptops and Computers" },
+            { "name": "Lenovo ThinkPad X1 Carbon", "price": 1500, "category": "Electronics", "subCategory": "Laptops and Computers" }
+          ]
+        },
+        {
+          "name": "Smartwatches and Wearables",
+          "imageLink": "https://example.com/wearables.jpg",
+          "products": [
+            { "name": "Apple Watch Series 9", "price": 399, "category": "Electronics", "subCategory": "Smartwatches and Wearables" },
+            { "name": "Fitbit Charge 5", "price": 150, "category": "Electronics", "subCategory": "Smartwatches and Wearables" },
+            { "name": "Samsung Galaxy Watch 6", "price": 350, "category": "Electronics", "subCategory": "Smartwatches and Wearables" }
+          ]
+        },
+        {
+          "name": "Headphones and Earbuds",
+          "imageLink": "https://example.com/headphones.jpg",
+          "products": [
+            { "name": "Sony WH-1000XM5", "price": 350, "category": "Electronics", "subCategory": "Headphones and Earbuds" },
+            { "name": "Bose QuietComfort Earbuds II", "price": 300, "category": "Electronics", "subCategory": "Headphones and Earbuds" },
+            { "name": "Apple AirPods Pro 2", "price": 250, "category": "Electronics", "subCategory": "Headphones and Earbuds" }
+          ]
+        },
+        {
+          "name": "Home Appliances",
+          "imageLink": "https://example.com/appliances.jpg",
+          "products": [
+            { "name": "LG Smart Refrigerator", "price": 1800, "category": "Electronics", "subCategory": "Home Appliances" },
+            { "name": "Dyson V15 Detect Vacuum Cleaner", "price": 700, "category": "Electronics", "subCategory": "Home Appliances" },
+            { "name": "Philips Air Fryer", "price": 120, "category": "Electronics", "subCategory": "Home Appliances" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fashion and Apparel",
+      "imageLink": "https://example.com/fashion.jpg",
+      "subCategories": [
+        {
+          "name": "Men's Clothing",
+          "imageLink": "https://example.com/mens-clothing.jpg",
+          "products": [
+            { "name": "Levi's 511 Slim Fit Jeans", "price": 60, "category": "Fashion and Apparel", "subCategory": "Men's Clothing" },
+            { "name": "Nike Tech Fleece Hoodie", "price": 80, "category": "Fashion and Apparel", "subCategory": "Men's Clothing" },
+            { "name": "Tommy Hilfiger Casual Shirt", "price": 65, "category": "Fashion and Apparel", "subCategory": "Men's Clothing" }
+          ]
+        },
+        {
+          "name": "Women's Clothing",
+          "imageLink": "https://example.com/womens-clothing.jpg",
+          "products": [
+            { "name": "Zara Floral Dress", "price": 90, "category": "Fashion and Apparel", "subCategory": "Women's Clothing" },
+            { "name": "H&M High-Waisted Trousers", "price": 40, "category": "Fashion and Apparel", "subCategory": "Women's Clothing" },
+            { "name": "Mango Blazer Jacket", "price": 120, "category": "Fashion and Apparel", "subCategory": "Women's Clothing" }
+          ]
+        },
+        {
+          "name": "Shoes and Footwear",
+          "imageLink": "https://example.com/shoes.jpg",
+          "products": [
+            { "name": "Adidas UltraBoost Running Shoes", "price": 180, "category": "Fashion and Apparel", "subCategory": "Shoes and Footwear" },
+            { "name": "Dr. Martens 1460 Boots", "price": 150, "category": "Fashion and Apparel", "subCategory": "Shoes and Footwear" },
+            { "name": "Converse Chuck Taylor All-Stars", "price": 60, "category": "Fashion and Apparel", "subCategory": "Shoes and Footwear" }
+          ]
+        },
+        {
+          "name": "Accessories",
+          "imageLink": "https://example.com/accessories.jpg",
+          "products": [
+            { "name": "Fossil Leather Wallet", "price": 50, "category": "Fashion and Apparel", "subCategory": "Accessories" },
+            { "name": "Ray-Ban Wayfarer Sunglasses", "price": 150, "category": "Fashion and Apparel", "subCategory": "Accessories" },
+            { "name": "Kate Spade Leather Handbag", "price": 250, "category": "Fashion and Apparel", "subCategory": "Accessories" }
+          ]
+        },
+        {
+          "name": "Jewelry",
+          "imageLink": "https://example.com/jewelry.jpg",
+          "products": [
+            { "name": "Pandora Silver Charm Bracelet", "price": 100, "category": "Fashion and Apparel", "subCategory": "Jewelry" },
+            { "name": "Tiffany & Co. Diamond Necklace", "price": 3000, "category": "Fashion and Apparel", "subCategory": "Jewelry" },
+            { "name": "Swarovski Crystal Earrings", "price": 200, "category": "Fashion and Apparel", "subCategory": "Jewelry" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Home and Living",
+      "imageLink": "https://example.com/home-living.jpg",
+      "subCategories": [
+        {
+          "name": "Furniture",
+          "imageLink": "https://example.com/furniture.jpg",
+          "products": [
+            { "name": "IKEA Hemnes 3-Door Cabinet", "price": 250, "category": "Home and Living", "subCategory": "Furniture" },
+            { "name": "Wayfair Mid-Century Modern Sofa", "price": 500, "category": "Home and Living", "subCategory": "Furniture" },
+            { "name": "Pottery Barn Wood Dining Table", "price": 900, "category": "Home and Living", "subCategory": "Furniture" }
+          ]
+        },
+        {
+          "name": "Kitchenware",
+          "imageLink": "https://example.com/kitchenware.jpg",
+          "products": [
+            { "name": "Cuisinart Food Processor", "price": 150, "category": "Home and Living", "subCategory": "Kitchenware" },
+            { "name": "Lodge Cast Iron Skillet", "price": 30, "category": "Home and Living", "subCategory": "Kitchenware" },
+            { "name": "Vitamix 5200 Blender", "price": 400, "category": "Home and Living", "subCategory": "Kitchenware" }
+          ]
+        },
+        {
+          "name": "Home Décor",
+          "imageLink": "https://example.com/home-decor.jpg",
+          "products": [
+            { "name": "Urban Outfitters Woven Wall Hanging", "price": 60, "category": "Home and Living", "subCategory": "Home Décor" },
+            { "name": "West Elm Modern Floor Lamp", "price": 120, "category": "Home and Living", "subCategory": "Home Décor" },
+            { "name": "Anthropologie Velvet Throw Pillow", "price": 45, "category": "Home and Living", "subCategory": "Home Décor" }
+          ]
+        }
+      ]
+    }
+  ]
+}

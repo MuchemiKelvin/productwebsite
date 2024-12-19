@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS -->
+</head>
+<body>
+
+  <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Latest Products
+        </h2>
+      </div>
+
+      <!-- Category Filter Dropdown -->
+      <div class="filter-container">
+        <select id="categoryFilter" onchange="filterProducts()">
+          <option value="">Select Category</option>
+          <!-- Categories will be populated here dynamically -->
+        </select>
+      </div>
+
+      <div class="row" id="productGrid">
+        <!-- Products will be populated here dynamically -->
+      </div>
+      
+      <div class="btn-box">
+        <a href="#">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/products.js"></script> <!-- Link to your JS -->
+</body>
+</html>

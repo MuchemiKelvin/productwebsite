@@ -1,0 +1,212 @@
+{
+  "categories": [
+    {
+      "name": "Electronics",
+      "imageLink": "https://example.com/electronics.jpg",
+      "subCategories": [
+        {
+          "name": "Smartphones",
+          "imageLink": "https://example.com/smartphones.jpg"
+        },
+        {
+          "name": "Laptops and Computers",
+          "imageLink": "https://example.com/laptops-computers.jpg"
+        },
+        {
+          "name": "Smartwatches and Wearables",
+          "imageLink": "https://example.com/smartwatches.jpg"
+        },
+        {
+          "name": "Headphones and Earbuds",
+          "imageLink": "https://example.com/headphones-earbuds.jpg"
+        },
+        {
+          "name": "Home Appliances",
+          "imageLink": "https://example.com/home-appliances.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Fashion and Apparel",
+      "imageLink": "https://example.com/fashion-apparel.jpg",
+      "subCategories": [
+        {
+          "name": "Men's Clothing",
+          "imageLink": "https://example.com/mens-clothing.jpg"
+        },
+        {
+          "name": "Women's Clothing",
+          "imageLink": "https://example.com/womens-clothing.jpg"
+        },
+        {
+          "name": "Shoes and Footwear",
+          "imageLink": "https://example.com/shoes-footwear.jpg"
+        },
+        {
+          "name": "Accessories",
+          "imageLink": "https://example.com/accessories.jpg"
+        },
+        {
+          "name": "Jewelry",
+          "imageLink": "https://example.com/jewelry.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Home and Living",
+      "imageLink": "https://example.com/home-living.jpg",
+      "subCategories": [
+        {
+          "name": "Furniture",
+          "imageLink": "https://example.com/furniture.jpg"
+        },
+        {
+          "name": "Kitchenware",
+          "imageLink": "https://example.com/kitchenware.jpg"
+        },
+        {
+          "name": "Home Décor",
+          "imageLink": "https://example.com/home-decor.jpg"
+        },
+        {
+          "name": "Bedding and Linens",
+          "imageLink": "https://example.com/bedding-linens.jpg"
+        },
+        {
+          "name": "Storage Solutions",
+          "imageLink": "https://example.com/storage-solutions.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Beauty and Personal Care",
+      "imageLink": "https://example.com/beauty-personal-care.jpg",
+      "subCategories": [
+        {
+          "name": "Skincare",
+          "imageLink": "https://example.com/skincare.jpg"
+        },
+        {
+          "name": "Hair Care",
+          "imageLink": "https://example.com/hair-care.jpg"
+        },
+        {
+          "name": "Makeup",
+          "imageLink": "https://example.com/makeup.jpg"
+        },
+        {
+          "name": "Fragrances and Perfumes",
+          "imageLink": "https://example.com/fragrances.jpg"
+        },
+        {
+          "name": "Grooming Tools",
+          "imageLink": "https://example.com/grooming-tools.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Sports and Outdoors",
+      "imageLink": "https://example.com/sports-outdoors.jpg",
+      "subCategories": [
+        {
+          "name": "Exercise Equipment",
+          "imageLink": "https://example.com/exercise-equipment.jpg"
+        },
+        {
+          "name": "Outdoor Gear",
+          "imageLink": "https://example.com/outdoor-gear.jpg"
+        },
+        {
+          "name": "Sports Apparel",
+          "imageLink": "https://example.com/sports-apparel.jpg"
+        },
+        {
+          "name": "Bicycles and Accessories",
+          "imageLink": "https://example.com/bicycles-accessories.jpg"
+        },
+        {
+          "name": "Camping Equipment",
+          "imageLink": "https://example.com/camping-equipment.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Toys and Games",
+      "imageLink": "https://example.com/toys-games.jpg",
+      "subCategories": [
+        {
+          "name": "Board Games and Puzzles",
+          "imageLink": "https://example.com/board-games-puzzles.jpg"
+        },
+        {
+          "name": "Action Figures and Dolls",
+          "imageLink": "https://example.com/action-figures-dolls.jpg"
+        },
+        {
+          "name": "Educational Toys",
+          "imageLink": "https://example.com/educational-toys.jpg"
+        },
+        {
+          "name": "Outdoor Play",
+          "imageLink": "https://example.com/outdoor-play.jpg"
+        },
+        {
+          "name": "Video Games and Consoles",
+          "imageLink": "https://example.com/video-games-consoles.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Books and Stationery",
+      "imageLink": "https://example.com/books-stationery.jpg",
+      "subCategories": [
+        {
+          "name": "Fiction and Non-Fiction Books",
+          "imageLink": "https://example.com/fiction-non-fiction-books.jpg"
+        },
+        {
+          "name": "School Supplies",
+          "imageLink": "https://example.com/school-supplies.jpg"
+        },
+        {
+          "name": "Office Supplies",
+          "imageLink": "https://example.com/office-supplies.jpg"
+        },
+        {
+          "name": "Journals and Planners",
+          "imageLink": "https://example.com/journals-planners.jpg"
+        },
+        {
+          "name": "Crafting Materials",
+          "imageLink": "https://example.com/crafting-materials.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Food and Beverages",
+      "imageLink": "https://example.com/food-beverages.jpg",
+      "subCategories": [
+        {
+          "name": "Snacks and Sweets",
+          "imageLink": "https://example.com/snacks-sweets.jpg"
+        },
+        {
+          "name": "Beverages",
+          "imageLink": "https://example.com/beverages.jpg"
+        },
+        {
+          "name": "Gourmet and Organic Foods",
+          "imageLink": "https://example.com/gourmet-organic-foods.jpg"
+        },
+        {
+          "name": "Health Foods",
+          "imageLink": "https://example.com/health-foods.jpg"
+        },
+        {
+          "name": "Cooking Ingredients",
+          "imageLink": "https://example.com/cooking-ingredients.jpg"
+        }
+      ]
+    }
+  ]
+}
