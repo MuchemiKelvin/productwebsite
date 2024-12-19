@@ -1,120 +1,208 @@
-// Replace the hardcoded products array with a fetch call
-let products = []; // Initialize empty array
-let filteredProducts = []; // Initialize filtered products
+let allProducts = [];
 
-// Fetch products from JSON file
-async function fetchProducts() {
-    try {
-        const response = await fetch('/data/products.json');
-        if (!response.ok) {
-            throw new Error('Failed to fetch products');
+// Define categories array
+const categories = [
+    {
+        name: "Electronics",
+        description: "Smartphones, Laptops, Gadgets",
+        image: "assets/images/categories/electronics.jpg",
+        categoryId: "Electronics"
+    },
+    {
+        name: "Fashion and Apparel",
+        description: "Clothing, Shoes, Accessories",
+        image: "assets/images/categories/fashion.jpg",
+        categoryId: "Fashion and Apparel"
+    },
+    {
+        name: "Home and Living",
+        description: "Furniture, Decor, Kitchen",
+        image: "assets/images/categories/home.jpg",
+        categoryId: "Home and Living"
+    },
+    {
+        name: "Beauty and Personal Care",
+        description: "Skincare, Makeup, Fragrances",
+        image: "assets/images/categories/beauty.jpg",
+        categoryId: "Beauty and Personal Care"
+    },
+    {
+        name: "Sports and Outdoors",
+        description: "Equipment, Activewear, Gear",
+        image: "assets/images/categories/sports.jpg",
+        categoryId: "Sports and Outdoors"
+    },
+    {
+        name: "Toys and Games",
+        description: "Board Games, Toys, Puzzles",
+        image: "assets/images/categories/toys.jpg",
+        categoryId: "Toys and Games"
+    },
+    {
+        name: "Books and Stationery",
+        description: "Books, Office Supplies",
+        image: "assets/images/categories/books.jpg",
+        categoryId: "Books and Stationery"
+    },
+    {
+        name: "Food and Beverages",
+        description: "Gourmet Food, Drinks",
+        image: "assets/images/categories/food.jpg",
+        categoryId: "Food and Beverages"
+    }
+];
+
+// Initialize everything when the DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing...');
+    initializeCategories();
+    loadProducts();
+    
+    // Get category from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+
+    if (categoryParam) {
+        console.log('Category parameter found:', categoryParam);
+        // Set the category filter dropdown to the selected category
+        const categoryFilter = document.getElementById('categoryFilter');
+        if (categoryFilter) {
+            categoryFilter.value = categoryParam;
         }
-        products = await response.json();
-        filteredProducts = products; // Initialize filtered products with all products
+        // Highlight the selected category card
+        highlightSelectedCategory(categoryParam);
+        // Trigger the filter
+        filterProducts();
+    }
+});
+
+// Initialize categories
+function initializeCategories() {
+    console.log('Initializing categories...');
+    const categoriesGrid = document.getElementById('categoriesGrid');
+    const categoryFilter = document.getElementById('categoryFilter');
+    
+    if (!categoriesGrid || !categoryFilter) {
+        console.error('Required elements not found');
+        return;
+    }
+
+    // Clear existing content
+    categoriesGrid.innerHTML = '';
+    
+    // Add categories to grid
+    categories.forEach(category => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = 'col-6 col-md-3 mb-4';
         
-        // After fetching products, initialize the UI
-        initializeUI();
-    } catch (error) {
-        console.error('Error loading products:', error);
-        // Optionally display error message to user
+        categoryDiv.innerHTML = `
+            <a href="?category=${encodeURIComponent(category.categoryId)}" 
+               class="category-card" 
+               data-category="${category.categoryId}">
+                <div class="category-image">
+                    <img src="${category.image}" alt="${category.name}">
+                </div>
+                <div class="category-content">
+                    <h3>${category.name}</h3>
+                    <p>${category.description}</p>
+                </div>
+            </a>
+        `;
+        
+        categoriesGrid.appendChild(categoryDiv);
+    });
+    
+    // Add categories to dropdown
+    categoryFilter.innerHTML = '<option value="">All Categories</option>';
+    categories.forEach(category => {
+        const option = document.createElement('option');
+        option.value = category.categoryId;
+        option.textContent = category.name;
+        categoryFilter.appendChild(option);
+    });
+}
+
+function highlightSelectedCategory(categoryId) {
+    // Remove active class from all category cards
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.classList.remove('active');
+    });
+    
+    // Add active class to selected category card
+    const selectedCard = document.querySelector(`.category-card[data-category="${categoryId}"]`);
+    if (selectedCard) {
+        selectedCard.classList.add('active');
     }
 }
 
-// Move existing initialization code into a separate function
-function initializeUI() {
-    // Extract unique categories from products
-    const categories = Array.from(new Set(products.map(product => product.category)));
-    
-    // Populate category dropdown
-    const categoryFilter = document.getElementById('categoryFilter');
-    categories.forEach(category => {
-        const option = document.createElement('option');
-        option.value = category;
-        option.innerText = category;
-        categoryFilter.appendChild(option);
-    });
+function loadProducts() {
+    fetch('data/products.json')
+        .then(response => response.json())
+        .then(data => {
+            allProducts = data.products;
+            displayProducts(allProducts);
+        })
+        .catch(error => {
+            console.error('Error loading products:', error);
+        });
+}
 
-    // Display initial products
+function filterProducts() {
+    const categoryFilter = document.getElementById('categoryFilter').value;
+    const priceSort = document.getElementById('priceSort').value;
+    
+    // Filter products by category
+    let filteredProducts = allProducts;
+    if (categoryFilter) {
+        filteredProducts = filteredProducts.filter(product => 
+            product.category === categoryFilter
+        );
+    }
+
+    // Sort products by price
+    if (priceSort) {
+        filteredProducts.sort((a, b) => {
+            if (priceSort === 'lowToHigh') {
+                return a.price - b.price;
+            } else {
+                return b.price - a.price;
+            }
+        });
+    }
+
+    // Display filtered and sorted products
     displayProducts(filteredProducts);
 }
 
-// Call fetchProducts when the page loads
-fetchProducts();
+function displayProducts(products) {
+    const productGrid = document.getElementById('productGrid');
+    productGrid.innerHTML = ''; // Clear existing products
 
-// Function to display products
-function displayProducts(productsToDisplay) {
-  const productGrid = document.getElementById('productGrid');
-  productGrid.innerHTML = ''; // Clear the grid before adding new products
-  
-  productsToDisplay.forEach(product => {
-    const productCard = document.createElement('div');
-    productCard.classList.add('col-sm-6', 'col-md-4', 'col-lg-3');
-    
-    const productBox = document.createElement('div');
-    productBox.classList.add('box');
-    
-    const productLink = document.createElement('a');
-    productLink.href = `/product/${product.id}`;
-    
-    const imgBox = document.createElement('div');
-    imgBox.classList.add('img-box');
-    
-    const img = document.createElement('img');
-    img.src = product.imageUrl;
-    img.alt = product.name;
-    imgBox.appendChild(img);
-    
-    const detailBox = document.createElement('div');
-    detailBox.classList.add('detail-box');
-    
-    const productName = document.createElement('h6');
-    productName.innerText = product.name;
-    
-    const priceBox = document.createElement('h6');
-    priceBox.innerHTML = `Price <span>$${product.price}</span>`;
-    
-    detailBox.appendChild(productName);
-    detailBox.appendChild(priceBox);
-    
-    const newTag = document.createElement('div');
-    newTag.classList.add('new');
-    newTag.innerText = 'New';
-    
-    productLink.appendChild(imgBox);
-    productLink.appendChild(detailBox);
-    productLink.appendChild(newTag);
-    
-    productBox.appendChild(productLink);
-    
-    const buttonBox = document.createElement('div');
-    buttonBox.classList.add('card', 'button');
-    
-    const button = document.createElement('button');
-    button.innerText = 'Add To Cart';
-    button.onclick = () => addToCart(product);
-    
-    buttonBox.appendChild(button);
-    
-    productBox.appendChild(buttonBox);
-    productCard.appendChild(productBox);
-    productGrid.appendChild(productCard);
-  });
-}
+    if (products.length === 0) {
+        productGrid.innerHTML = `
+            <div class="col-12 text-center">
+                <h3>No products found in this category</h3>
+            </div>`;
+        return;
+    }
 
-// Function to filter products by selected category
-function filterProducts() {
-  const selectedCategory = document.getElementById('categoryFilter').value;
-  
-  if (selectedCategory) {
-    filteredProducts = products.filter(product => product.category === selectedCategory);
-  } else {
-    filteredProducts = products;
-  }
-  
-  displayProducts(filteredProducts);
-}
-
-// Function to handle adding a product to the cart
-function addToCart(product) {
-  console.log(`${product.name} added to cart`);
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'col-sm-6 col-xl-4';
+        productCard.innerHTML = `
+            <div class="box">
+                <div class="img-box">
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
+                <div class="detail-box">
+                    <h6>${product.name}</h6>
+                    <h6>Price: <span>$${product.price}</span></h6>
+                    <a href="#" onclick="addToCart(${product.id}); return false;">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        `;
+        productGrid.appendChild(productCard);
+    });
 }

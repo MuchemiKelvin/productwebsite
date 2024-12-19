@@ -8,43 +8,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-
+  <div class="header">
+    <a href="/" class="logo">Products Website</a>
+    <div class="header-right">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html" class="active">Product</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html" class="active">Contact Us</a>
+    </div>
+</div>
   <section class="shop_section layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Latest Products
-        </h2>
+      <div class="row" id="categoriesGrid">
+        <!-- Categories will be dynamically inserted here -->
+      </div>
+      
+      <!-- Filters -->
+      <div class="row mb-4">
+        <div class="col-md-3">
+          <select id="categoryFilter" class="form-select" onchange="filterProducts()">
+            <option value="">All Categories</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select id="priceSort" class="form-select" onchange="filterProducts()">
+            <option value="">Sort by Price</option>
+            <option value="lowToHigh">Price: Low to High</option>
+            <option value="highToLow">Price: High to Low</option>
+          </select>
+        </div>
       </div>
 
-      <div class="row">
-        <!-- Filters Column -->
-        <div class="col-md-3">
-          <div class="filter-sidebar">
-            <div class="filter-box">
-              <h4>Filter By Category</h4>
-              <select id="categoryFilter" class="form-control" onchange="filterProducts()">
-                <option value="">All Categories</option>
-              </select>
-            </div>
-            
-            <div class="filter-box">
-              <h4>Sort By Price</h4>
-              <select id="priceSort" class="form-control" onchange="filterProducts()">
-                <option value="">Select Order</option>
-                <option value="lowToHigh">Price: Low to High</option>
-                <option value="highToLow">Price: High to Low</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- Products Grid Column -->
-        <div class="col-md-9">
-          <div class="row" id="productGrid">
-            <!-- Products will be populated here dynamically -->
-          </div>
-        </div>
+      <!-- Products Grid -->
+      <div class="row" id="productGrid">
+        <!-- Products will be dynamically inserted here -->
       </div>
     </div>
   </section>
