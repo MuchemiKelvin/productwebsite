@@ -27,7 +27,7 @@
                 <p class="text-blk subHeadingText">
                     We'd Love to Hear from You
                 </p>
-                <form id="contactForm" class="contact-form">
+                <form id="contactForm" class="contact-form" onsubmit="sendEmail(event)">
                     <div class="form-group">
                         <input type="text" 
                                class="form-control" 
@@ -61,5 +61,15 @@
     </div>
 
     <script src="js/contact.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "KSbIDZdnxSXvnQVoF",
+      });
+   })();
+</script>
 </body>
 </html>

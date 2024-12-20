@@ -22,4 +22,30 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         });
     }
-}); 
+});
+
+function sendEmail(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Gather form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Create a template for the email
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+    };
+
+    // Send the email using EmailJS
+    emailjs.send('service_p7affs9', 'template_gd78zto', templateParams)
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Your message has been sent!');
+        }, (error) => {
+            console.log('FAILED...', error);
+            alert('There was an error sending your message. Please try again later.');
+        });
+} 
