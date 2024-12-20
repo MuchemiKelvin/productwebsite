@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const sliderContainer = document.getElementById('sliderContent');
-    
+
     if (sliderContainer) {
         sliderContent.forEach((slide, index) => {
             const slideDiv = document.createElement('div');
             slideDiv.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-            
+
             slideDiv.innerHTML = `
                 <div class="slider-card">
                     <img src="${slide.backgroundImage}" alt="" class="background-image"/>
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             `;
-            
+
             sliderContainer.appendChild(slideDiv);
         });
     }

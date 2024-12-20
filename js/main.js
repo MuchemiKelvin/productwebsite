@@ -13,7 +13,7 @@ function loadCategories() {
         .then(data => {
             const categorySelect = document.getElementById('categoryFilter');
             categorySelect.innerHTML = '<option value="">All Categories</option>';
-            
+
             // Add categories from categories.json
             data.categories.forEach(category => {
                 const option = document.createElement('option');
@@ -42,11 +42,11 @@ function loadProducts() {
 function filterProducts() {
     const categoryFilter = document.getElementById('categoryFilter').value;
     const priceSort = document.getElementById('priceSort').value;
-    
+
     // Filter products by category
     let filteredProducts = allProducts;
     if (categoryFilter) {
-        filteredProducts = filteredProducts.filter(product => 
+        filteredProducts = filteredProducts.filter(product =>
             product.category === categoryFilter
         );
     }
