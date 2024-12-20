@@ -1129,3 +1129,98 @@ textarea.form-control {
     }
 }
 
+/* Header Styles */
+.header_section {
+    padding: 15px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: 700;
+    color: #002c3f !important;
+    text-decoration: none;
+}
+
+.navbar-brand span {
+    color: #f16179;
+}
+
+.custom_nav-container {
+    padding: 0;
+}
+
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    padding: 8px 15px !important;
+    color: #002c3f !important;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #f16179 !important;
+}
+
+/* Active page indication */
+.nav-item.active .nav-link {
+    color: #ffffff !important;
+    background-color: #f16179;
+}
+
+.user_option {
+    display: flex;
+    align-items: center;
+}
+
+.cart-link {
+    position: relative;
+    color: #002c3f;
+    font-size: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.cart-link:hover {
+    color: #f16179;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #f16179;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar-toggler {
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 44, 63, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+}
+

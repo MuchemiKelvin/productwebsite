@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             heading: "Welcome To Our Gift Shop",
             description: "Discover our curated collection of unique gifts for every occasion. From electronics to fashion, find the perfect present that speaks from the heart.",
             ctaText: "Shop Now",
-            ctaLink: "/products",
+            ctaLink: "index.html",
             backgroundImage: "assets/images/slider1.jpg"
         },
         {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             heading: "New Electronics Collection",
             description: "Explore the latest in technology with our premium selection of smartphones, laptops, and smart devices. Stay ahead with cutting-edge gadgets.",
             ctaText: "View Electronics",
-            ctaLink: "/products?category=Electronics",
+            ctaLink: "products.html",
             backgroundImage: "assets/images/slider2.jpg"
         },
         {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             heading: "Fashion & Style",
             description: "Elevate your wardrobe with our trendy fashion collection. From casual wear to elegant accessories, express yourself with style.",
             ctaText: "Browse Fashion",
-            ctaLink: "/products?category=Fashion",
+            ctaLink: "products.html",
             backgroundImage: "assets/images/slider3.jpg"
         }
     ];
