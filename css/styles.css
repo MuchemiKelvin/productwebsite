@@ -1130,8 +1130,8 @@ textarea.form-control {
 }
 
 .footer {
-    background-color: #333;
-    color: #fff;
+  background-color: hsl(210, 86%, 70%);
+  color: #fff;
     padding: 20px;
     text-align: center;
 }
@@ -1158,5 +1158,37 @@ textarea.form-control {
 
 .social-links a:hover {
     text-decoration: underline;
+}
+
+.hero-section {
+    background-color: hsl(210, 86%, 70%);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #f8f9fa;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #f16179;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e14159;
 }
 
