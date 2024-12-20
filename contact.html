@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us - Gift Shop</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,39 +18,83 @@
         </nav>
     </header>
 
-    <main>
-        <section class="contact_section layout_padding">
-            <div class="container">
-                <div class="heading_container heading_center">
-                    <h2>Contact Us</h2>
-                    <p>Send us a message and we'll get back to you as soon as possible</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="form_container">
-                            <form action="" id="contactForm">
-                                <div class="form-group mb-3">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" required>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label for="message">Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                                </div>
-                                <div class="btn_box">
-                                    <button type="submit">Send Message</button>
-                                </div>
-                            </form>
-                        </div>
+    <div class="responsive-container-block bigContainer">
+        <div class="responsive-container-block Container">
+            <img class="mainImg" src="assets/images/contact/contact-us.jpg" alt="Contact Us">
+            <div class="allText aboveText">
+                <p class="text-blk headingText">
+                    Get In Touch
+                </p>
+                <p class="text-blk subHeadingText">
+                    We'd Love to Hear from You
+                </p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" 
+                               class="form-control" 
+                               id="name" 
+                               name="name" 
+                               placeholder="Your Name" 
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" 
+                               class="form-control" 
+                               id="email" 
+                               name="email" 
+                               placeholder="Your Email" 
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" 
+                                  id="message" 
+                                  name="message" 
+                                  rows="4" 
+                                  placeholder="Your Message"
+                                  required></textarea>
+                    </div>
+                    <button type="submit" class="explore">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="responsive-container-block Container bottomContainer">
+            <img class="mainImg" src="assets/images/contact/visit-us.jpg" alt="Visit Us">
+            <div class="allText bottomText">
+                <p class="text-blk headingText">
+                    Visit Our Store
+                </p>
+                <p class="text-blk subHeadingText">
+                    Come Experience Our Collection
+                </p>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fa fa-map-marker-alt"></i>
+                        <p class="text-blk description">
+                            123 Gift Street<br>
+                            Shopping District<br>
+                            New York, NY 10001
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa fa-clock"></i>
+                        <p class="text-blk description">
+                            Monday - Saturday<br>
+                            9:00 AM - 8:00 PM
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa fa-phone"></i>
+                        <p class="text-blk description">
+                            +1 (234) 567-8900<br>
+                            +1 (234) 567-8901
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <script src="js/contact.js"></script>
 </body>
