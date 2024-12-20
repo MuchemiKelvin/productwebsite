@@ -86,7 +86,8 @@ function displayProducts(products) {
                 </div>
                 <div class="detail-box">
                     <div>
-                        <h6>${product.name}</h6>
+                        <h5>${product.name}</h5>
+                        <h6>${product.category}</h6>
                         <h6>
                             Price:
                             <span>$${product.price}</span>
